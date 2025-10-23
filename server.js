@@ -1,9 +1,11 @@
 const express = require('express');
 const fs = require('fs');
 const app = express();
+const cors = require('cors');
 const port = 3000;
 
 app.use(express.json());
+app.use(cors());
 
 let storage = {};
 const DB_FILE = './storage.json';
