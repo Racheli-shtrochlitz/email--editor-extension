@@ -33,7 +33,7 @@ app.post('/api/message/:id', (req, res) => {
 
 app.get('/api/message/:id', (req, res) => {
   const id = req.params.id;
-  res.json({ text: storage[id] || '' });
+  res.json({ text: storage[id].text || '' });
 });
 
 app.listen(port, () => {
